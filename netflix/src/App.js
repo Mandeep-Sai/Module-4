@@ -6,6 +6,7 @@ import Home from './components/Home'
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 import SearchResults from './components/SearchResults'
 import ShowDetails from './components/ShowDetails';
+import RegisterForm from './components/RegisterForm'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Route path='/'exact component={Home}/>
       <Route path='/searchResults/:query' component={SearchResults} />
       <Route path='/ShowDetails/:id' component={ShowDetails}/>
+      <Route path ='/register' component ={RegisterForm}/>
     </Router>
   );
 }

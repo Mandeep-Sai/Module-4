@@ -10,7 +10,9 @@ export class Navigation extends Component {
     this.props.history.push("/searchResults/" +query)
     console.log(query)
   }
-
+  register=()=>{
+    this.props.history.push("/register")
+  }
   render() {
     return (
       <div>
@@ -31,6 +33,7 @@ export class Navigation extends Component {
             <FormControl type="text" placeholder="Search" className="mr-sm-2" />
             <Button variant="outline-info" className='searchBtn' onClick={this.searchQuery} ><FaSearch/></Button>
           </Form>
+          <Button variant="outline" className='registerBtn' onClick={this.register} >Register</Button>
         </Navbar>
       </div>
     )

@@ -20,7 +20,7 @@ class Carousel extends Component {
     let parsedJson = await response.json()
     let movies = parsedJson.Search
     this.setState({movies})
-    new Glide('.glide ',{
+    new Glide('.glide',{
       type:'carousel',
       perView:6,
       // gap: -90,

@@ -14,6 +14,15 @@ nav a {
   color: white !important;
   border-color: #E50914 !important;
 }
+.registerBtn {
+  border-color: #E50914 !important;
+  color: white !important;
+  margin: 0 10px;
+}
+.registerBtn:hover {
+  color: #E50914 !important;
+  background-color: black;
+}
 .searchResults img{
   height: 250px
 }
@@ -78,4 +87,22 @@ nav a {
   color: white;
   font-size: 24px;
   margin-left: 5%;
+}
+.form{
+  color: white !important;
+  max-width: 60% !important;
+}
+.errorMsg {
+  color: red;
+  font-size: 12px;
+}
+.approveMsg{
+  color: green;
+  font-size: 12px;
+}
+.submitBtn{
+  margin-left: 40%;
+}
+.form p{
+  font-size: 40px;
 }
