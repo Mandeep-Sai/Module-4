@@ -1,0 +1,51 @@
+nav{
+  background-color: rgb(17, 17, 17);
+}
+body{
+  background-color: #2b2929 !important;
+}
+nav a {
+  color: #DDDDDD !important;
+}
+.searchBtn{
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  color: white !important;
+  border-color: #E50914 !important;
+}
+.searchResults img{
+  height: 250px
+}
+.searchResults img:hover{
+  transform: scale(1.1);
+  transition: ease-in-out 0.4s;
+}
+.searchResults p {
+  color: #E50914 !important;
+  font-size: 24px;
+}
+.showDetails {
+  color: white;
+}
+.year{
+  font-size: 17px;
+}
+.belowTitle{
+  font-size: 12px;
+}
+.plot{
+ margin-top: auto;
+}
+.cast{
+  font-size: 14px;
+}
+.cast p {
+  margin: 0;
+  padding: 0;
+}
+.reviews p{
+  font-size: 13px;
+  margin: 0;
+  padding: 0;
+}
