@@ -49,3 +49,33 @@ nav a {
   margin: 0;
   padding: 0;
 }
+.glide__slides li {
+  color: white;
+}
+.glide img{
+  height: 14rem;
+  width: 12rem;
+}
+.glide__track{
+  width: 90vw;
+  margin:0 auto
+}
+
+.glide__arrows button{
+  border: none;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  color: #E50914;
+  /* box-shadow: 9px -9px 21px 9px rgba(0,0,0,0.75); */
+}
+.glide__arrow--left{
+  left: 0.5vw !important;
+}
+.glide__arrow--right{
+  right: 0.5vw!important;
+}
+.movieName {
+  color: white;
+  font-size: 24px;
+  margin-left: 5%;
+}
