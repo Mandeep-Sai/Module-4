@@ -56,7 +56,7 @@ nav a {
 .reviews p{
   font-size: 13px;
   margin: 0;
-  padding: 0;
+  padding: 5px;
 }
 .glide__slides li {
   color: white;
@@ -86,7 +86,6 @@ nav a {
 .movieName {
   color: white;
   font-size: 24px;
-  margin-left: 5%;
 }
 .form{
   color: white !important;
@@ -105,4 +104,31 @@ nav a {
 }
 .form p{
   font-size: 40px;
+}
+.crsl img {
+  height: 14rem;
+  width: 12rem;
+}
+.crsl {
+  max-width: 95%;
+}
+
+.react-multiple-carousel__arrow {
+  font-size: 10px !important;
+  background-color: #E50914 !important;
+}
+.react-multiple-carousel__arrow:focus{
+  outline: none !important;
+}
+.submitReviewBtn{
+  background-color: #E50914 !important;
+  color: black;
+  outline: none;
+  border: none !important;
+  border-radius: 20px !important;
+}
+.reviews h6{
+  color: #E50914 !important;
+  margin-left: 4px;
+  font-size: 18px;
 }

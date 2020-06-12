@@ -27,10 +27,10 @@ export class ShowDetails extends Component {
             </Col>
             <Col xs={8} >
               <h4>{this.state.movie.Title} <span className='year'>({this.state.movie.Year})</span>
-              <span className='ml-5'><FaStar/> {this.state.movie.imdbRating}/10</span></h4>
+              <span className='ml-5'><FaStar style={{color : 'yellow'}}/> {this.state.movie.imdbRating}/10</span></h4>
               <p className='belowTitle'>{this.state.movie.Rated} | {this.state.movie.Runtime} | {this.state.movie.Genre} | {this.state.movie.Released}</p>
               <div className='plot'>{this.state.movie.Plot}</div>
-              <div className='cast'>
+              <div className='cast mt-3'>
                <p>Director : {this.state.movie.Director}</p>
                <p>Actors : {this.state.movie.Actors}</p>
               </div>
