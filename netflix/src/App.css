@@ -116,6 +116,8 @@ nav a {
 .react-multiple-carousel__arrow {
   font-size: 10px !important;
   background-color: #E50914 !important;
+  min-width:33px !important;
+  min-height:33px !important;
 }
 .react-multiple-carousel__arrow:focus{
   outline: none !important;
