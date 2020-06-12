@@ -35,6 +35,7 @@ class Carsl extends React.Component{
   })
     let parsedJson = await response.json()
     let songs = parsedJson.data
+    console.log(songs)
     let artistId = parsedJson.data[0].artist.id
     this.setState({songs,artistId})
   }
@@ -50,16 +51,18 @@ class Carsl extends React.Component{
     })
       let parsedJson = await response.json()
       let songs = parsedJson.data
-      console.log(this.props)
+
       this.setState({songs})
     }
   }
   render(){
     return(
       <Container fluid className='crsl mt-3 mb-3'>
-        <Link to={'/artists/'+this.state.artistId}>
-            <p >{this.props.name}</p>
-        </Link>
+        {this.props.for === 'artist' ? null : (
+          <Link to={'/artists/'+this.state.artistId}>
+          <p >{this.props.name}</p>
+          </Link>
+        )}
         <Carousel
          ssr={true} // means to render carousel on server-side.
         //  infinite={true}
@@ -69,12 +72,16 @@ class Carsl extends React.Component{
          draggable={false}
         //  showDots={true}
          responsive = {responsive}
+         className ='carouselContent'
          >
           {this.state.songs.map(song =>{
             return(
-            <div>
-              <Link to={'/ShowDetails/'+song.id}>
+            <div className='col'>
+              <Link to={'/ShowAlbum/'+song.album.id}>
                 <img src={song.album.cover} alt=""/>
+                {this.props.for === 'artist' ? <p class="cardBody">{song.album.title}</p> : 
+                  <p class="cardBody">{song.title}</p>
+                }
               </Link>
             </div>
             )

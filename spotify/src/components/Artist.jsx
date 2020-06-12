@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import '../Artist.css'
+
 import Carsl from './Carsl'
 
 export class Artist extends Component {
@@ -46,7 +46,7 @@ export class Artist extends Component {
           <div className="container" id="albumCards">
             <p style={{fontWeight: "600",color: "white", fontSize: "20px;"}}>Albums</p>
             {this.state.loading ? <p>Loading.....</p> : (
-              <Carsl name={this.state.artistInfo.name}/>
+              <Carsl name={this.state.artistInfo.name} for='artist'/>
             )}
           </div>
         </div>
