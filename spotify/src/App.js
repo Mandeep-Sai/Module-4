@@ -29,6 +29,7 @@ render(){
       <Route path='/artists/:id' component={Artist}/>
       <Route path='/showAlbum/:id' render={(props)=><Album {...props}func ={this.selectedSong}/>}/>
       <Route path='/searchResults/:text' component={searchResults} />
+      <Route path='/searchResults/' exact component={Home} />
       <Player song={this.state.song} artist={this.state.artist} img={this.state.img}/>
     </Router >
   );

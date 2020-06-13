@@ -85,7 +85,7 @@ class Carsl extends React.Component{
               <Link to={'/ShowAlbum/'+song.album.id}>
                 <img src={song.album.cover} alt=""/>
                 {this.props.for === 'artist' ? <p class="cardBody">{song.album.title}</p> : 
-                  <p class="cardBody">{song.title}</p>
+                  <p className="cardBody">{song.title}</p>
                 }
               </Link>
             </div>

@@ -94,6 +94,10 @@
   color: rgb(26, 207, 90) ;
   transition: all .2s ease-in-out;
 }
+/* Modal */
+.modal-title {
+  margin-left: 40% !important;
+}
 
 /* Player */
 .play-section{

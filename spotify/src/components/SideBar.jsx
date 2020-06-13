@@ -1,22 +1,29 @@
 import React from 'react'
 import {FaSpotify,FaSearch,FaHome,FaBookOpen} from 'react-icons/fa'
 import { IconContext } from "react-icons";
-import {Form,FormControl,Button} from 'react-bootstrap'
+import {Form,FormControl,Button,Modal} from 'react-bootstrap'
 import {withRouter} from 'react-router-dom'
 
 
 
 class SideBar extends React.Component {
   state ={
-    query :''
+    query :'',
   }
   searchQuery =(e)=>{
     let query = e.currentTarget.value
     console.log(query)
     this.props.history.push('/searchResults/'+query)
   }
+  handleShow =()=>{
+    this.setState({show:true})
+  }
+  handleClose =()=>{
+    this.setState({show:false})
+  }
   render(){
   return (
+  <>
     <nav id="sidebar">
           <div className="sidebar-header">
             <IconContext.Provider value ={{className:'spotifyIcon'}}>
@@ -34,7 +41,7 @@ class SideBar extends React.Component {
               </div>
               <div className="d-flex">
                   <IconContext.Provider value ={{className:'sidebarIcons'}}>
-                    <FaSearch/>
+                    <FaSearch onClick={this.showSearchBar}/>
                   </IconContext.Provider>
                   <a href="">Search</a>
               </div>
@@ -45,14 +52,14 @@ class SideBar extends React.Component {
                   <a href="album.html">Your Library</a>
               </div>
             </div>
-            <Form inline>
+            <Form inline >
               <FormControl type="text" placeholder="Search" onChange ={this.searchQuery} className="mr-sm-2" />
               {/* <Button variant="outline-success"><FaSearch/></Button> */}
             </Form>
           </ul>
           <div id="buttons">
             <div id="signUp">
-              <button type="button" className="btn btn-block"><p>SIGN UP</p></button>
+                <button type="button" onClick={this.handleShow} className="btn btn-block"><p>SIGN UP</p></button>
             </div>
             <div id="login">
               <button type="button" className="btn btn-block"><p>LOGIN</p></button>
@@ -69,6 +76,24 @@ class SideBar extends React.Component {
             </div>
           </div>
     </nav>
+     {/* <Modal
+        show={this.state.show}
+        onHide={this.handleClose}
+        backdrop="static"
+        keyboard={false}
+      >
+        <Modal.Header closeButton>
+          <Modal.Title >Sign Up</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          I will not close if you click outside me. Don't even try to press
+          escape key.
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="primary">Sign Up</Button>
+        </Modal.Footer>
+      </Modal> */}
+  </>
   )
 }
 }

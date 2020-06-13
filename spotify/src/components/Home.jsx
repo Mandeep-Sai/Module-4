@@ -9,7 +9,7 @@ import Carsl from './Carsl'
 
 export class Home extends Component {
   state ={
-    queryText :'metallica'
+    queryText :'edsheeran'
   }
   query =(e)=>{
     let queryText = e.currentTarget.value
