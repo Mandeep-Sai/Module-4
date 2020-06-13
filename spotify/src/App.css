@@ -120,11 +120,16 @@
   align-items: center;
 }
 #songInfo{
+  width: 300px;
   margin-top: 5px;
   margin-left: 0px;
   margin-bottom: 5px;
   padding-left: 10px;
   color: white;
+}
+#songInfo p{
+  margin: 0;
+  padding: 0;
 }
 #song{
   margin: 5px;
@@ -206,6 +211,8 @@
   letter-spacing: 2px;
 }
 .form-inline .form-control{
+  margin-left: 0.8rem !important;
+  width: 160px !important;
   border-radius : 30px;
   height : 30px;
   font-size:14px;

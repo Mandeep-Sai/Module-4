@@ -32,10 +32,7 @@ export class Home extends Component {
               <Nav.Link href="#link">NEW RELEASES</Nav.Link>
               <Nav.Link href="#link">DISCOVER</Nav.Link>
             </Nav>
-            <Form inline>
-              <FormControl type="text" placeholder="Search" onChange={this.query} className="mr-sm-2" />
-              <Button variant="outline-success"><FaSearch/></Button>
-            </Form>
+            
           </Navbar.Collapse>
         </Navbar>
 

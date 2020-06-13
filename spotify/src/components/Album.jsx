@@ -50,7 +50,7 @@ export class Album extends Component {
                     <div id="trackName">
                       <a id='musicIcon'><FaMusic/></a>
                       <div>
-                        <p>{track.title}</p>
+                        <p onClick ={()=>this.props.func(track,this.state.album.cover_medium)}>{track.title}</p>
                         <Link  to={'/artists/'+track.artist.id}>
                         <p style={{opacity: "0.5"}}>{track.artist.name}</p>
                         </Link>

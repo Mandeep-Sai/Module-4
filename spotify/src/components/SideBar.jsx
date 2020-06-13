@@ -1,8 +1,21 @@
 import React from 'react'
 import {FaSpotify,FaSearch,FaHome,FaBookOpen} from 'react-icons/fa'
 import { IconContext } from "react-icons";
+import {Form,FormControl,Button} from 'react-bootstrap'
+import {withRouter} from 'react-router-dom'
 
-export default function SideBar() {
+
+
+class SideBar extends React.Component {
+  state ={
+    query :''
+  }
+  searchQuery =(e)=>{
+    let query = e.currentTarget.value
+    console.log(query)
+    this.props.history.push('/searchResults/'+query)
+  }
+  render(){
   return (
     <nav id="sidebar">
           <div className="sidebar-header">
@@ -32,6 +45,10 @@ export default function SideBar() {
                   <a href="album.html">Your Library</a>
               </div>
             </div>
+            <Form inline>
+              <FormControl type="text" placeholder="Search" onChange ={this.searchQuery} className="mr-sm-2" />
+              {/* <Button variant="outline-success"><FaSearch/></Button> */}
+            </Form>
           </ul>
           <div id="buttons">
             <div id="signUp">
@@ -54,3 +71,5 @@ export default function SideBar() {
     </nav>
   )
 }
+}
+export default withRouter(SideBar)

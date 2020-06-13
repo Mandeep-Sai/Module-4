@@ -58,6 +58,11 @@ class Carsl extends React.Component{
   render(){
     return(
       <Container fluid className='crsl mt-3 mb-3'>
+        {this.props.for !== 'search' ? null : (
+          <Link to={'/artists/'+this.state.artistId}>
+          <p >Search Results for "{this.props.name}"</p>
+          </Link>
+        )}
         {this.props.for === 'artist' ? null : (
           <Link to={'/artists/'+this.state.artistId}>
           <p >{this.props.name}</p>

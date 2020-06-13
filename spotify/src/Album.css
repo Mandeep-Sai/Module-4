@@ -49,6 +49,7 @@
 }
 #trackName p:hover{
   color: rgb(26, 207, 90);
+  cursor: pointer;
 }
 #trackName #musicIcon{
   color: white;
