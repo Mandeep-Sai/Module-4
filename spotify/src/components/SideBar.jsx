@@ -2,7 +2,7 @@ import React from 'react'
 import {FaSpotify,FaSearch,FaHome,FaBookOpen} from 'react-icons/fa'
 import { IconContext } from "react-icons";
 import {Form,FormControl,Button,Modal} from 'react-bootstrap'
-import {withRouter} from 'react-router-dom'
+import {withRouter, Link} from 'react-router-dom'
 
 
 
@@ -59,7 +59,9 @@ class SideBar extends React.Component {
           </ul>
           <div id="buttons">
             <div id="signUp">
+              <Link to='/signup'>
                 <button type="button" onClick={this.handleShow} className="btn btn-block"><p>SIGN UP</p></button>
+              </Link>
             </div>
             <div id="login">
               <button type="button" className="btn btn-block"><p>LOGIN</p></button>
